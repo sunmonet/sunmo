@@ -1,0 +1,46 @@
+# https://developer.smartthings.com/docs/devices/device-profiles#categories
+# https://community.smartthings.com/t/change-icons-in-new-app/184190/25?u=w35l3y
+name: "contact_v2"
+components:
+  - id: main
+    label: Contact Sensor
+    capabilities:
+      - id: contactSensor
+        version: 1
+      - id: battery
+        version: 1
+      - id: signalStrength
+        version: 1
+      - id: powerSource
+        version: 1
+      - id: refresh
+        version: 1
+      - id: valleyboard16460.info
+        version: 1
+    categories:
+      - name: ContactSensor
+preferences:
+  - name: profile
+    title: Profile
+    description: "Choose the profile "
+    required: true
+    preferenceType: enumeration
+    definition:
+      options:
+        contact_v2: Normal
+        contact_v1: No battery
+        carbonmonoxide_v1: Carbon Monoxide Sensor
+        motion_v2: Motion Sensor
+        smoke_v1: Smoke Detector
+        sound_v1: Sound Sensor
+        water_v2: Water Sensor
+        default_v1: Default
+      default: contact_v2
+metadata:
+  deviceType: ContactSensor
+  ocfDeviceType: x.com.st.d.sensor.contact
+  deviceTypeId: ContactSensor
+  mnmn: SmartThingsCommunity
+owner:
+  ownerType: USER
+  ownerId: ea35e8c8-3aef-2f72-958b-e3ad10644043
